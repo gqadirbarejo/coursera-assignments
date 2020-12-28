@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
+}
+body {
+  font-family: Roboto;
+  font-size: 14px;
+}
+.main-container {
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+}
+.header {
+  border-bottom: 1px solid #dedede;
+}
+.header .nav-bar {
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+}
+
+.header .nav-bar ul {
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.header .nav-bar ul li {
+  display: inline-block;
+  padding: 10px 10px;
+}
+
+.header .nav-bar ul li a {
+  text-decoration: none;
+  color: dimgray;
+}
+
+.content-area {
+  padding: 20px;
+}
+
+.sec-row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.sec-row .sec-col {
+  width: 33.33333333%;
+  float: left;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.as-card {
+  border: 1px solid #c8e1ff;
+  background: #f1f8ff;
+}
+
+.as-card .card-header {
+  float: right;
+  min-width: 100px;
+  text-align: center;
+  border: 1px solid #c8e1ff;
+  margin-top: -1px;
+  margin-right: -1px;
+  background-color: #dedede;
+  color: #fff;
+}
+
+.sec-col:nth-child(1n) .as-card .card-header {
+  background-color: darkcyan;
+}
+.sec-col:nth-child(2n) .as-card .card-header {
+  background-color: mediumorchid;
+}
+.sec-col:nth-child(3n) .as-card .card-header {
+  background-color: dodgerblue;
+}
+
+.as-card .card-header > .card-header__title {
+  padding: 5px 20px;
+}
+
+.as-card .card-content {
+  float: right;
+  width: 100%;
+  text-align: left;
+}
+
+.as-card .card-content > .card-content__p {
+  padding: 10px;
+}
+
+.clear-both::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+/* desktop (992px and up) */
+@media only screen and (min-width: 992px) {
+  .sec-col {
+    width: 33.33333333%;
+  }
+}
+
+/* Tablet (768px and 991px) */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .sec-col.tb-6 {
+    width: 50%;
+  }
+  .sec-col.tb-12 {
+    width: 100%;
+  }
+}
+/* Mobile (767px) */
+@media only screen and (max-width: 767px) {
+  .sec-col.mb-full {
+    width: 100%;
+  }
+}
